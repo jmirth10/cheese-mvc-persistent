@@ -28,7 +28,6 @@ public class Cheese {
     @ManyToOne
     private Category category;
 
-    private CheeseType type;
 
     public Cheese(String name, String description) {
         this.name = name;
@@ -65,11 +64,4 @@ public class Cheese {
         this.description = description;
     }
 
-    public CheeseType getType() {
-        return type;
-    }
-
-    public void setType(CheeseType type) {
-        this.type = type;
-    }
 }
