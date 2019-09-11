@@ -1,6 +1,8 @@
 package org.launchcode.models;
 
 
+import org.launchcode.models.Cheese;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -22,6 +24,10 @@ public class Menu {
 
     @ManyToMany
     private List<Cheese> cheeses;
+
+    public void addItem(Cheese item){
+        cheeses.add(item);
+    }
 
     public Menu(){}
 
