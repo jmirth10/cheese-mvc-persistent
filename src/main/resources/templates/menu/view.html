@@ -12,9 +12,9 @@
             <li th:each="cheese: ${cheeses}" th:text="${cheese.name}"></li>
         </ul>
 
-        <p th:unless="${cheese.size()}"><i>No Cheese Yet :(</i></p>
+        <p th:unless="${cheeses} and ${cheeses.size()}"><i>No Cheese Yet :(</i></p>
 
-        <p><a href="'/menu/add-item/' + ${menuId}">Add Category</a></p>
+        <p><a href=" '/menu/add-item/' + ${menuId}">Add Cheese</a></p>
 
     </body>
 </html>
